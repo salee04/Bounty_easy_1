@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "hello_world_canister_backend": {
+      "declarations": {
+        "node_compatibility": true
+      },
+      "main": "src/hello_world_canister_backend/main.mo",
+      "type": "motoko"
+    },
+    "hello_world_canister_frontend": {
+      "dependencies": [
+        "hello_world_canister_backend"
+      ],
+      "source": [
+        "src/hello_world_canister_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "hello_world_canister_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
